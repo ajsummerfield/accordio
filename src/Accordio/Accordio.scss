@@ -1,0 +1,43 @@
+.accordio {
+  position: relative;
+  $p: &;
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--active {
+
+      #{$p}__panel {
+        max-height: 1000px;
+      }
+    }
+  }
+
+  &__heading {
+    position: relative;
+    background-color: #cccccc;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color linear 250ms;
+    z-index: 15;
+
+    &:hover {
+      background-color: darken(#cccccc, 10%);
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    transition: max-height ease-in-out 500ms;
+  }
+
+  &__content {
+    padding: 15px;
+    background-color: #eeeeee;
+  }
+}
