@@ -30,3 +30,6 @@ Thumbs.db
 # next output
 .next
 out
+
+#npm
+package-lock.json
