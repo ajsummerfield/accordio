@@ -1,0 +1,19 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "defaultSeverity": "warning",
+  "rules": {
+    "color-hex-length": "long",
+    "order/properties-alphabetical-order": null,
+    "max-nesting-depth": null,
+    "selector-max-id": null,
+    "selector-max-compound-selectors": null,
+    "selector-class-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute"]
+      }
+    ]
+  }
+}
