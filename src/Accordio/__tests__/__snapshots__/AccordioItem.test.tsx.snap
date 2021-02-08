@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordioItem Component Should match the snapshot 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "index": 0,
+      "setIndex": [Function],
+    }
+  }
+>
+  <div
+    className="accordio__item 
+    "
+    onClick={[Function]}
+  >
+    Hello World
+  </div>
+</Context.Provider>
+`;
