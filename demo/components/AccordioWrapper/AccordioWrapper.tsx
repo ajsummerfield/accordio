@@ -3,7 +3,7 @@ import {
   AccordioItem,
   AccordioHeading,
   AccordioContent
-} from 'accordio';
+} from '../Accordio';
 
 type AccordioWrapperProps = {
   items: any[]

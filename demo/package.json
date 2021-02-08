@@ -8,9 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "accordio": "file:../src",
     "next": "10.0.5",
-    "next-transpile-modules": "^6.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.32.6"

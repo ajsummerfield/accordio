@@ -31,5 +31,11 @@ Thumbs.db
 .next
 out
 
-#npm
+# npm
 package-lock.json
+
+# coverage
+coverage/
+
+# demo
+demo/components/Accordio/
