@@ -5,13 +5,14 @@ import useAccordioItemContext from './hooks/useAccordioItemContext';
 
 type AccordioItemProps = {
   index: number;
-  children: any;
+  children: JSX.Element;
 };
 
 const AccordioItem = ({ index, children }: AccordioItemProps) => {
   const { activeIndex, setActiveIndex } = useAccordioContext();
   const { setIndex } = useAccordioItemContext();
-  const className = `accordio__item ${activeIndex === index ? 'accordio__item--active' : ''}`;
+  const className = `accordio__item 
+    ${activeIndex === index ? 'accordio__item--active' : ''}`;
 
   setIndex(index);
 
@@ -21,7 +22,7 @@ const AccordioItem = ({ index, children }: AccordioItemProps) => {
 
   const context = {
     index: index,
-    setIndex: setIndex
+    setIndex: setIndex,
   };
 
   return (
