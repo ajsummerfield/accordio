@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import AccordioContext from './context/AccordioContext';
 
 type AccordioProps = {
-  children: JSX.Element;
+  children: any;
 };
 
 const Accordio = ({ children }: AccordioProps) => {

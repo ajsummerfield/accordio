@@ -5,7 +5,7 @@ import useAccordioItemContext from './hooks/useAccordioItemContext';
 
 type AccordioItemProps = {
   index: number;
-  children: JSX.Element;
+  children: any;
 };
 
 const AccordioItem = ({ index, children }: AccordioItemProps) => {
@@ -17,7 +17,7 @@ const AccordioItem = ({ index, children }: AccordioItemProps) => {
   setIndex(index);
 
   const handleOnClick = () => {
-    setActiveIndex(activeIndex !== index ? index : null);
+    setActiveIndex(activeIndex !== index ? index : -1);
   };
 
   const context = {

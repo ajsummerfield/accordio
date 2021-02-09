@@ -3,7 +3,7 @@ import useAccordioContext from './hooks/useAccordioContext';
 import useAccordioItemContext from './hooks/useAccordioItemContext';
 
 type AccordioContentProps = {
-  children: JSX.Element;
+  children: any;
 };
 
 const AccordioContent = ({ children }: AccordioContentProps) => {

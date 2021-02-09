@@ -1,7 +1,7 @@
 import React from 'react';
 
 type AccordioHeadingProps = {
-  children: JSX.Element;
+  children: any;
 };
 
 const AccordioHeading = ({ children }: AccordioHeadingProps) => {
