@@ -6,7 +6,7 @@ type AccordioProps = {
 };
 
 const Accordio = ({ children }: AccordioProps) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const context = { activeIndex, setActiveIndex };
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AccordioItemContext from './context/AccordioItemContext';
 import useAccordioContext from './hooks/useAccordioContext';
 import useAccordioItemContext from './hooks/useAccordioItemContext';
@@ -14,7 +14,9 @@ const AccordioItem = ({ index, children }: AccordioItemProps) => {
   const className = `accordio__item 
     ${activeIndex === index ? 'accordio__item--active' : ''}`;
 
-  setIndex(index);
+  useEffect(() => {
+    setIndex(index);
+  }, [index]);
 
   const handleOnClick = () => {
     setActiveIndex(activeIndex !== index ? index : -1);

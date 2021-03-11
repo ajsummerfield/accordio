@@ -1,8 +1,15 @@
 import React from 'react';
 
-const AccordioItemContext = React.createContext({
-  index: null,
+interface AccordioItemContextValue {
+  index: number;
+  setIndex: (index: number) => void;
+}
+
+const contextValue: AccordioItemContextValue = {
+  index: -1,
   setIndex: (index: number) => {}
-});
+};
+
+const AccordioItemContext = React.createContext<AccordioItemContextValue>(contextValue);
 
 export default AccordioItemContext;
