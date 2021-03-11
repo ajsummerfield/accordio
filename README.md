@@ -35,7 +35,7 @@ There are 4 components that build up the accordion as show in the above import, 
 
 The `index` prop on `AccordioItem` is required as it is used to handle which item is open and what should get opened on click.
 
-You can have as many `AccordioItem`'s as you want, just ensure each one contains the `AccordioHeading` and `AccordioContent` components.
+You can have as many `AccordioItem`'s as you want, just ensure each one has an `index` prop set (and they are different) and that it contains the `AccordioHeading` and `AccordioContent` components as children.
 
 ### Recommendation
 
