@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AccordioContext from './context/AccordioContext';
+import AccordioContext from '../context/AccordioContext';
 
 type AccordioProps = {
   children: any;

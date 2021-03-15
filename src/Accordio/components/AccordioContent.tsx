@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import useAccordioContext from './hooks/useAccordioContext';
-import useAccordioItemContext from './hooks/useAccordioItemContext';
+import useAccordioContext from '../hooks/useAccordioContext';
+import useAccordioItemContext from '../hooks/useAccordioItemContext';
 
 type AccordioContentProps = {
   children: any;

@@ -1,6 +1,6 @@
-import Accordio from './Accordio';
-import AccordioItem from './AccordioItem';
-import AccordioHeading from './AccordioHeading';
-import AccordioContent from './AccordioContent';
+import Accordio from './components/Accordio';
+import AccordioItem from './components/AccordioItem';
+import AccordioHeading from './components/AccordioHeading';
+import AccordioContent from './components/AccordioContent';
 
 export { Accordio, AccordioItem, AccordioHeading, AccordioContent };

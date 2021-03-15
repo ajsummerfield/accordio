@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import AccordioItemContext from './context/AccordioItemContext';
-import useAccordioContext from './hooks/useAccordioContext';
-import useAccordioItemContext from './hooks/useAccordioItemContext';
+import AccordioItemContext from '../context/AccordioItemContext';
+import useAccordioContext from '../hooks/useAccordioContext';
+import useAccordioItemContext from '../hooks/useAccordioItemContext';
 
 type AccordioItemProps = {
   index: number;
