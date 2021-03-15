@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import AccordioItemContext from '../context/AccordioItemContext';
+import AccordioItemContext, { AccordioItemContextValue } from '../context/AccordioItemContext';
 
 const useAccordioItemContext = () => {
-  const context = useContext(AccordioItemContext);
+  const context = useContext<AccordioItemContextValue>(AccordioItemContext);
   return context;
 };
 

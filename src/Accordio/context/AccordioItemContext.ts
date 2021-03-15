@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AccordioItemContextValue {
+export interface AccordioItemContextValue {
   index: number;
   setIndex: (index: number) => void;
 }

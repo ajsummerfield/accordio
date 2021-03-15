@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AccordioContextValue {
+export interface AccordioContextValue {
   activeIndex: number;
   setActiveIndex: (index: number) => void;
 }
@@ -12,4 +12,4 @@ const contextValue: AccordioContextValue = {
 
 const AccordioContext = React.createContext<AccordioContextValue>(contextValue);
 
-export default AccordioContext;
+export default AccordioContext
