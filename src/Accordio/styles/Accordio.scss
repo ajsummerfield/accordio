@@ -1,0 +1,71 @@
+.accordio {
+  $p: &;
+  position: relative;
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &--active {
+
+      #{$p}__heading {
+        background: darken(#cccccc, 10%);
+      }
+
+      #{$p}__chevron {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+  }
+
+  &__heading {
+    position: relative;
+    background-color: #cccccc;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color linear 250ms;
+    z-index: 15;
+
+    &:hover {
+      background-color: darken(#cccccc, 10%);
+    }
+  }
+
+  &__chevron {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(-90deg);
+    height: 16px;
+    width: 25px;
+    border: 2px solid transparent;
+    transition: all 250ms linear;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -3px;
+      left: 4px;
+      transform: rotate(45deg);
+      height: 10px;
+      width: 10px;
+      border-bottom: 2px solid #333333;
+      border-right: 2px solid #333333;
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    transition: max-height ease-in-out 500ms;
+  }
+
+  &__content {
+    padding: 15px;
+    background-color: #eeeeee;
+  }
+}
