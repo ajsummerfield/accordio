@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
+import 'accordio/styles/accordio.min.css';
 import '../styles/globals.css';
-import '../components/Accordio/Accordio.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
