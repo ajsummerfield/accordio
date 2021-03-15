@@ -2,12 +2,22 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "es5",
+    "module": "commonjs",
     "lib": ["esnext", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
-    "baseUrl": "."
+    "baseUrl": ".",
+    "outDir": "dist",
+    "rootDir": "Accordio",
+    "noEmit": true
   },
+  "include": [
+    "Accordio/**/*"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "coverage",
+    "Accordio/__tests__"
   ]
 }

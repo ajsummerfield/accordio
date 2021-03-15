@@ -1,12 +1,19 @@
 {
   "name": "accordio",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple react accordion with customisable options.",
-  "main": "Accordio/index.ts",
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
   "private": true,
   "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build:types": "tsc --noEmit false --declaration --emitDeclarationOnly --outDir dist/types",
+    "build:styles": "sass Accordio/styles/Accordio.scss dist/styles/accordio.min.css --style compressed",
+    "build:src": "babel Accordio --out-dir dist --extensions .ts,.tsx --ignore Accordio/__tests__/**/*.test.tsx,Accordio/__tests__/helpers/*.ts",
+    "build:assets": "cp package.json ../README.md ./dist",
+    "build": "npm run clean && npm run build:src && npm run build:styles && npm run build:types && npm run build:assets",
     "test": "jest",
-    "lint:scss": "stylelint \"./Accordio/*.scss\"",
+    "lint:scss": "stylelint \"./Accordio/styles/*.scss\"",
     "lint:ts": "eslint \"./Accordio/*.{js,ts,tsx}\""
   },
   "repository": "git@github.com:ajsummerfield/accordio.git",
@@ -24,6 +31,7 @@
   },
   "homepage": "https://github.com/ajsummerfield/accordio#readme",
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
@@ -31,14 +39,13 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
-    "@types/enzyme": "^3.10.8",
     "@types/jest": "^26.0.20",
     "@types/react": "^17.0.0",
     "@types/react-test-renderer": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "@typescript-eslint/parser": "^4.13.0",
     "babel-jest": "^26.6.3",
-    "copyfiles": "^2.4.1",
+    "babel-preset-minify": "^0.5.1",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -47,15 +54,14 @@
     "gulp-hub": "^4.2.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-test-renderer": "^17.0.1",
+    "sass": "^1.32.8",
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "typescript": "^4.1.3"
   },
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
   }
 }
