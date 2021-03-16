@@ -13,7 +13,7 @@ You can install accordio in your project using npm:
 Then to use accordio you will need to import the different accordio components into the component that you require an accordion:
 
 ```
-import 'accordio/accordio.css';
+import 'accordio/styles/accordio.min.css';
 import {
   Accordio,
   AccordioItem,
